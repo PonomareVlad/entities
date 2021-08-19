@@ -62,6 +62,21 @@
 					<h1>entities <a href="https://npmjs.org/package/entities"><img src="http://img.shields.io/npm/v/entities.svg" alt="NPM version"></a> <a href="https://npmjs.org/package/entities"><img src="https://img.shields.io/npm/dm/entities.svg" alt="Downloads"></a> <a href="http://travis-ci.org/fb55/entities"><img src="http://img.shields.io/travis/fb55/entities.svg" alt="Build Status"></a> <a href="https://coveralls.io/r/fb55/entities"><img src="http://img.shields.io/coveralls/fb55/entities.svg" alt="Coverage"></a></h1>
 				</a>
 				<p>Encode &amp; decode HTML &amp; XML entities with ease &amp; speed.</p>
+				<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+					<h2>Features</h2>
+				</a>
+				<ul>
+					<li>⚔️ Battle tested: <code>entities</code> is used by many popular libraries; eg.
+						<a href="https://github.com/fb55/htmlparser2"><code>htmlparser2</code></a>, the official
+						<a href="https://github.com/aws/aws-sdk-js-v3">AWS SDK</a> and
+						<a href="https://github.com/commonmark/commonmark.js"><code>commonmark</code></a> use it to
+					process HTML entities.</li>
+					<li>⚡️ Fast: <code>entities</code> is the fastes library for decoding HTML entities (as of
+					August 2021); see <a href="#performance">performance</a>.</li>
+					<li>🎛 Configurable: Get an output tailored for your needs. You are fine with
+						UTF8? That&#39;ll safe you some bytes. Prefer to only have ASCII characters? We
+					can do that as well!</li>
+				</ul>
 				<a href="#how-to" id="how-to" style="color: inherit; text-decoration: none;">
 					<h2>How to…</h2>
 				</a>
@@ -88,44 +103,44 @@
 					<h2>Performance</h2>
 				</a>
 				<p>This is how <code>entities</code> compares to other libraries on a very basic benchmark
-				(see <code>scripts/benchmark.ts</code>, for 10,000,000 iterations):</p>
+				(see <code>scripts/benchmark.ts</code>, for 10,000,000 iterations; <strong>lower is better</strong>):</p>
 				<table>
 					<thead>
 						<tr>
 							<th>Library</th>
+							<th>Version</th>
 							<th><code>decode</code> perf</th>
 							<th><code>encode</code> perf</th>
 							<th><code>escape</code> perf</th>
-							<th>Bundle size</th>
 						</tr>
 					</thead>
 					<tbody><tr>
 							<td>entities</td>
+							<td><code>3.0.1</code></td>
 							<td>1.418s</td>
 							<td>6.786s</td>
 							<td>2.196s</td>
-							<td><img src="https://img.shields.io/bundlephobia/min/entities" alt="npm bundle size"></td>
 						</tr>
 						<tr>
 							<td>html-entities</td>
+							<td><code>2.3.2</code></td>
 							<td>2.530s</td>
 							<td>6.829s</td>
 							<td>2.415s</td>
-							<td><img src="https://img.shields.io/bundlephobia/min/html-entities" alt="npm bundle size"></td>
 						</tr>
 						<tr>
 							<td>he</td>
+							<td><code>1.2.0</code></td>
 							<td>5.800s</td>
 							<td>24.237s</td>
 							<td>3.624s</td>
-							<td><img src="https://img.shields.io/bundlephobia/min/he" alt="npm bundle size"></td>
 						</tr>
 						<tr>
 							<td>parse-entities</td>
+							<td><code>3.0.0</code></td>
 							<td>9.660s</td>
 							<td>N/A</td>
 							<td>N/A</td>
-							<td><img src="https://img.shields.io/bundlephobia/min/parse-entities" alt="npm bundle size"></td>
 						</tr>
 				</tbody></table>
 				<hr>
@@ -146,7 +161,7 @@
 				<p>As of August 2021, <code>entities</code> is a bit faster than other modules. Still, this is
 				not a very differentiated space and other modules can catch up.</p>
 				<p><strong>More importantly</strong>, you might already have <code>entities</code> in your dependency graph
-					(as a dependency of eg. cheerio, or htmlparser2), and including it directly
+					(as a dependency of eg. <code>cheerio</code>, or <code>htmlparser2</code>), and including it directly
 					might not even increase your bundle size. The same is true for other entity
 				libraries, so have a look through your <code>node_modules</code> directory!</p>
 				<blockquote>
