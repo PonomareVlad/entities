@@ -156,6 +156,12 @@
 				<p>You can have a look at the options for the <code>encode</code> and <code>decode</code> methods to see
 				everything you can configure.</p>
 				<blockquote>
+					<p>When should I use strict decoding?</p>
+				</blockquote>
+				<p>Strict decoding is for decoding entities in attributes, as well as in legacy
+					environments. When strict decoding, entities not terminated with a semicolon
+				will be ignored.</p>
+				<blockquote>
 					<p>Why should I use <code>entities</code> instead of alternative modules?</p>
 				</blockquote>
 				<p>As of August 2021, <code>entities</code> is a bit faster than other modules. Still, this is
