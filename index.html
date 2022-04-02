@@ -110,7 +110,10 @@ libraries, so have a look through your <code>node_modules</code> directory!</p>
 <blockquote>
 <p>Does <code>entities</code> support tree shaking?</p>
 </blockquote>
-<p>Yes! <code>entities</code> ships as both a CommonJS and a ES module.</p>
+<p>Yes! <code>entities</code> ships as both a CommonJS and a ES module. Note that for best
+results, you should not use the <code>encode</code> and <code>decode</code> functions, as they wrap
+around a number of other functions, all of which will remain in the bundle.
+Instead, use the functions that you need directly.</p>
 <hr>
 
 <a href="#acknowledgements" id="acknowledgements" style="color: inherit; text-decoration: none;">
