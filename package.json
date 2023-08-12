@@ -1,6 +1,6 @@
 {
-    "name": "@ponomarevlad/entities",
-    "version": "4.5.0-browser-target-1",
+    "name": "entities",
+    "version": "4.5.0",
     "description": "Encode & decode XML and HTML entities with ease & speed",
     "author": "Felix Boehm <me@feedic.com>",
     "funding": "https://github.com/fb55/entities?sponsor=1",
@@ -22,19 +22,19 @@
     "browser": "lib/esm/index.js",
     "exports": {
         ".": {
-            "require": "./lib/index.js",
+            "browser": "./lib/esm/index.js",
             "import": "./lib/esm/index.js",
-            "browser": "./lib/esm/index.js"
+            "require": "./lib/index.js"
         },
         "./lib/decode.js": {
-            "require": "./lib/decode.js",
+            "browser": "./lib/esm/decode.js",
             "import": "./lib/esm/decode.js",
-            "browser": "./lib/esm/decode.js"
+            "require": "./lib/decode.js"
         },
         "./lib/escape.js": {
-            "require": "./lib/escape.js",
+            "browser": "./lib/esm/escape.js",
             "import": "./lib/esm/escape.js",
-            "browser": "./lib/esm/escape.js"
+            "require": "./lib/escape.js"
         }
     },
     "files": [
