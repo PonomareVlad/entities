@@ -1,6 +1,6 @@
 {
-    "name": "entities",
-    "version": "4.5.0",
+    "name": "@ponomarevlad/entities",
+    "version": "4.5.0-browser-target-5",
     "description": "Encode & decode XML and HTML entities with ease & speed",
     "author": "Felix Boehm <me@feedic.com>",
     "funding": "https://github.com/fb55/entities?sponsor=1",
